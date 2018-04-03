@@ -10,5 +10,6 @@ $dark: hsl(0, 0, 0); // changes the bulma $dark variable from $grey-darker/hsl(0
 
 // to use bulma variables as-is in your CSS, code here BELOW the @import
 html {
-  background: $primary; //will be $turquoise/hsl(171, 100%, 41%) UNLESS you've customized $primary above the @import
+  background: $light; //will be $turquoise/hsl(171, 100%, 41%) UNLESS you've customized $primary above the @import
 }
+.panel-block.has-day {display:block;}

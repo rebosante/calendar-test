@@ -9677,5 +9677,9 @@ label.panel-block:hover {
 }
 
 html {
-  background: #00d1b2;
+  background: whitesmoke;
+}
+
+.panel-block.has-day {
+  display: block;
 }
