@@ -78,7 +78,7 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("console.log('app loaded')\r\n\r\n\r\n\r\n\r\n\n\n//# sourceURL=webpack:///./main.js?");
+eval("console.log('app loaded')\n\n\n\n\n\n\n//# sourceURL=webpack:///./main.js?");
 
 /***/ })
 

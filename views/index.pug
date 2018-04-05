@@ -15,6 +15,7 @@ html(lang='en')
           h2.subtitle
             | Built in ExpressJS environment using Bulma, Sass and Pug.
           p= title
+          p= moment().format("dddd, MMMM Do")
     section.section
       .container
         .panel
@@ -26,35 +27,55 @@ html(lang='en')
                 | Third column
               .column
                 | Fourth column
-          #day-content.panel-block.is-active.has-day
+          .panel-block.has-day
             .columns
               .column
                 .columns
                   .column.is-3
                     div Day
-                    div Sun 1
                   .column
                     .columns
                       .column.is-2.has-text-centered
                         div time
-                        div -
-                        div -
-                        div -
                       .column
                         div description
-                        div -
-                        div -
-                        div -
               .column
                 .columns
                   .column
                     div task
-                    div -
-                    div -
-                    div -
                   .column.is-2.has-text-centered
                     div done
-                    div -
-                    div -
-                    div -
+          #day-content.panel-block.is-active.has-day
+            each val, i in days
+              .columns
+                .column
+                  .columns
+                    .column.is-3
+                      div= val.fullday.format("ddd")
+                      div= val.fullday.format("D")
+                      div= val.saints
+                    .column
+                      .columns
+                        .column.is-2.has-text-centered
+                          div -
+                          div -
+                          div -
+                          div -
+                        .column
+                          div -
+                          div -
+                          div -
+                          div -
+                .column
+                  .columns
+                    .column
+                      div -
+                      div -
+                      div -
+                      div -
+                    .column.is-2.has-text-centered
+                      div -
+                      div -
+                      div -
+                      div -
     script(defer='', src='javascripts/bundle.js')
