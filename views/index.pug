@@ -1,0 +1,60 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    meta(http-equiv='X-UA-Compatible', content='ie=edge')
+    script(defer='', src='https://use.fontawesome.com/releases/v5.0.9/js/all.js', integrity='sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl', crossorigin='anonymous')
+    link(rel='stylesheet', href='/stylesheets/style.css')
+  body
+    section.hero.is-dark
+      .hero-body
+        .container
+          h1.title
+            | Calendar test by JCam
+          h2.subtitle
+            | Built in ExpressJS environment using Bulma, Sass and Pug.
+          p= title
+    section.section
+      .container
+        .panel
+          p.panel-heading
+            | Calendar
+          .panel-block.has-day
+            .columns
+              .column
+                | Third column
+              .column
+                | Fourth column
+          #day-content.panel-block.is-active.has-day
+            .columns
+              .column
+                .columns
+                  .column.is-3
+                    div Day
+                    div Sun 1
+                  .column
+                    .columns
+                      .column.is-2.has-text-centered
+                        div time
+                        div -
+                        div -
+                        div -
+                      .column
+                        div description
+                        div -
+                        div -
+                        div -
+              .column
+                .columns
+                  .column
+                    div task
+                    div -
+                    div -
+                    div -
+                  .column.is-2.has-text-centered
+                    div done
+                    div -
+                    div -
+                    div -
+    script(defer='', src='javascripts/bundle.js')
