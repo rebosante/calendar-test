@@ -1,9 +1,6 @@
-// You can use Bulma's initial-variables as-is in your HTML or customize them here BEFORE the bulma @import e.g.
+// Override variables
 
-$black: hsl(0, 0%, 21%); // changes the bulma $dark variable from $grey-darker/hsl(0, 0%, 21%) to full black
-// Delete the above line to reset $dark to it's intital value
-
-// Uncomment line 7 to set $primary to a "lovely" flesh tone.
+$black: hsl(0, 0%, 21%); 
 $primary: hsl(132, 38%, 74%);
 $light: hsl(0, 0%, 96%);
 $dark: hsl(5, 6%, 34%);
@@ -12,11 +9,57 @@ $success: hsl(189, 21%, 42%);
 $warning: hsl(27, 91%, 60%);
 $danger: hsl(358, 84%, 63%);
 
-
 @import './node_modules/bulma/bulma.sass'; // imports all of bulma's defaults
+@import 'spacing.scss'; // imports my spacing mixing
 
-// to use bulma variables as-is in your CSS, code here BELOW the @import
 html {
-  background: $light; //will be $turquoise/hsl(171, 100%, 41%) UNLESS you've customized $primary above the @import
+  background: $light;
+  font-weight: 300;
 }
 .panel-block.has-day {display:block;}
+
+.panel {
+  background: white;
+}
+.panel-block.is-active {
+  border-left-color: $dark;
+}
+
+.panel-heading {
+  background: $success;
+  color: $light;
+}
+
+.m-b-xs {
+  margin-bottom: 0.25rem!important;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: 300;
+  line-height: 1.125;
+}
+.subtitle {
+  font-weight: 200;
+}
+
+.is-large{
+  font-weight: 300;
+}
+
+.level-item {
+  width: 100%;
+  flex-shrink: 1;
+}
+
+.level-right {
+  width: 40%;
+}
+
+.box {
+  width: 100%;
+}
+
+.is-day-block {
+  border-bottom: 1px dotted $primary;
+}

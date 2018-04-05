@@ -1,6 +1,7 @@
 doctype html
 html(lang='en')
   head
+    title Weekly Agenda Test
     meta(charset='UTF-8')
     meta(name='viewport', content='width=device-width, initial-scale=1.0')
     meta(http-equiv='X-UA-Compatible', content='ie=edge')
@@ -11,22 +12,37 @@ html(lang='en')
       .hero-body
         .container
           h1.title
-            | Calendar test by JCam
+            | Weekly schedule test by JCam
           h2.subtitle
             | Built in ExpressJS environment using Bulma, Sass and Pug.
-          p= title
           p= moment().format("dddd, MMMM Do")
     section.section
+        .container
+            .columns
+                .column
+                    .level
+                        .level-left
+                            .level-item
+                                .title contact: jay@rebosante.com
+                        .level-right
+                            .level-item
+                                .box
+                                    .heading Week from
+                                    .title= fDay + ' to ' + lDay
+                                    .level.m-t-md
+                                        .level-item
+                                             div
+                                                .heading Current week
+                                                .title.is-5= moment().format("wo")
+                                        .level-item
+                                            div
+                                                .heading Year
+                                                .title.is-5= moment().format("YYYY")
+    section
       .container
         .panel
           p.panel-heading
-            | Calendar
-          .panel-block.has-day
-            .columns
-              .column
-                | Third column
-              .column
-                | Fourth column
+            | Current week days
           .panel-block.has-day
             .columns
               .column
@@ -45,15 +61,17 @@ html(lang='en')
                     div task
                   .column.is-2.has-text-centered
                     div done
-          #day-content.panel-block.is-active.has-day
+          #day-content.panel-block.has-day
             each val, i in days
-              .columns
+              .columns.is-day-block
                 .column
                   .columns
                     .column.is-3
-                      div= val.fullday.format("ddd")
-                      div= val.fullday.format("D")
-                      div= val.saints
+                      .title.m-b-xs.has-text-success= val.fullday.format("ddd")
+                      .title.m-b-xs.has-text-info= val.fullday.format("D")
+                      .is-size-7
+                        | Saint day: 
+                        span.has-text-info= val.saints
                     .column
                       .columns
                         .column.is-2.has-text-centered
