@@ -17,6 +17,7 @@ function getSaintsFrom(day, month, pos) {
   const url = `https://api.abalin.net/get/namedays?day=${day}&month=${month}&country=es`;
   return fetch(url)
     .then(response => response.json()).then(responseText => {
+      console.log('hola', responseText)
       const resp = typeof responseText === 'string' ? JSON.parse(responseText) : responseText;
       days[pos].saints = resp.data['name_es'];
       // resolve(resp);

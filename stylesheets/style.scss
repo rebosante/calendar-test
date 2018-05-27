@@ -63,3 +63,8 @@ html {
 .is-day-block {
   border-bottom: 1px dotted $primary;
 }
+
+.biggy {
+  font-weight: bold;
+  color: $danger!important;
+}
